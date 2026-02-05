@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .blink {
+            font-size: 30px;
+            font-weight: bold;
+            animation: blink 1s infinite;
+
+        }
+
+        @keyframes blink {
+            from {
+                color: red;
+            }
+
+            to {
+                color: blue;
+            }
+        }
+
+        .dot-loader {
+            width: 80px;
+            height: 80px;
+            border: 10px solid lightgray;
+            border-top: 10px solid blue;
+            border-radius: 50%;
+            animation: spin 1.5s infinite linear;
+
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .bouncing-balls{
+           
+            display: flex;
+            gap: 15px;
+            margin: 10px;
+
+        }
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: rgb(185, 36, 36);
+            border-radius: 50%;
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        @keyframes float {
+            from {top: 0px;}
+
+            to {top: 100px;}
+        }
+        @keyframes bounce{
+            from {transform: translateY(0);}
+            to {transform: translateY(-20px);}
+        }
+        .floating-logo img{
+            width:150px;
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% {transform: translateY(0);}
+            50% {transform: translateY(-20px);}
+            100% {transform: translateY(0);}
+        }
+        .progress{
+            width:300px;
+            height:20px;
+            background:lightgray;
+            border-radius:10px;
+            overflow:hidden;
+        }
+        .progress-bar{
+            width:50%;
+            height:100%;
+            background:blue;
+            animation: slide 2s infinite;
+        }
+        @keyframes slide{
+            0% {transform: translateX(-100%);}
+            50% {transform: translateX(0);}
+            100% {transform: translateX(100%);}
+        }
+    </style>
+</head>
+
+<body>
+    <h3> Task 1 :Blinking Text loader</h3>
+    <div class="blink">Loading...</div>
+
+    <h3> Task 2 :create a rotating circular loader</h3>
+    <div class="dot-loader"></div>
+
+    <h3> Task 3 :create three bouncing dots animation</h3>
+    <div class="bouncing-balls">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <h3> Task 4: Create a floating logo or icon effect</h3>
+    <div class ="floating-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" >
+
+        <h3>Task 5 : create a sliding progress bar animation</h3>
+        <div class ="progress">
+            <div class ="progress-bar"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
